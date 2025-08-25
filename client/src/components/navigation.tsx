@@ -22,7 +22,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-primary" data-testid="text-logo">rest.js</span>
+            <span className="text-2xl font-bold text-primary" data-testid="text-logo">muuyal.io</span>
           </div>
           
           <div className="hidden md:block">

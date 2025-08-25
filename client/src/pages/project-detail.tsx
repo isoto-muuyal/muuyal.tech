@@ -33,7 +33,7 @@ export default function ProjectDetail() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="text-2xl font-bold text-primary">
-              rest.js
+              muuyal.io
             </Link>
             <Link href="/">
               <Button variant="outline" data-testid="button-back-home">

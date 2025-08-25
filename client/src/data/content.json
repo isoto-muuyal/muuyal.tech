@@ -1,13 +1,13 @@
 {
   "company": {
-    "name": "rest.js",
+    "name": "muuyal.io",
     "tagline": "Fast, scalable software development from Chihuahua, Mexico",
     "description": "We deliver high-quality React, Java, Spring Boot, and Node.js solutions with QA automation and nearshore outsourcing expertise. Build your next project with speed and precision.",
     "location": "Chihuahua, Mexico",
-    "email": "hello@restjs.dev",
+    "email": "hello@muuyal.io",
     "phone": "+52 614 123 4567",
     "whatsapp": "+52 614 123 4567",
-    "linkedin": "linkedin.com/company/restjs"
+    "linkedin": "linkedin.com/company/muuyal"
   },
   "services": [
     {
@@ -100,7 +100,7 @@
       "problem": "Users struggle to track spending across multiple accounts and categories, leading to budget overruns and unclear financial picture.",
       "solution": "Built a React.js frontend with Spring Boot backend, featuring real-time expense tracking, AI-powered categorization, and intuitive budget management.",
       "results": "95% user satisfaction, 40% improvement in budget adherence, automated processing of 10,000+ transactions monthly.",
-      "githubUrl": "https://github.com/restjs/budgetbuddy"
+      "githubUrl": "https://github.com/muuyal/budgetbuddy"
     },
     {
       "id": "ai-cv-builder",
@@ -112,28 +112,28 @@
       "problem": "Job seekers spend hours crafting resumes that often fail to pass ATS systems or capture recruiter attention effectively.",
       "solution": "Developed an AI-powered platform with React.js frontend and Node.js backend, featuring smart content suggestions, ATS optimization, and industry-specific templates.",
       "results": "85% interview rate increase, 2,000+ CVs generated monthly, 98% ATS compatibility score across major platforms.",
-      "githubUrl": "https://github.com/restjs/ai-cv-builder"
+      "githubUrl": "https://github.com/muuyal/ai-cv-builder"
     },
     {
       "id": "ecommerce",
       "name": "E-Commerce Platform",
       "description": "Full-featured online store with inventory management, payment processing, and analytics dashboard.",
       "technologies": ["React", "Spring Boot"],
-      "githubUrl": "https://github.com/restjs/ecommerce-platform"
+      "githubUrl": "https://github.com/muuyal/ecommerce-platform"
     },
     {
       "id": "analytics",
       "name": "Analytics Dashboard",
       "description": "Real-time business intelligence platform with customizable widgets and automated reporting.",
       "technologies": ["React", "Node.js"],
-      "githubUrl": "https://github.com/restjs/analytics-dashboard"
+      "githubUrl": "https://github.com/muuyal/analytics-dashboard"
     },
     {
       "id": "api-gateway",
       "name": "Mobile API Gateway",
       "description": "Microservices architecture with API gateway for mobile app backends and third-party integrations.",
       "technologies": ["Java", "Spring Cloud"],
-      "githubUrl": "https://github.com/restjs/api-gateway"
+      "githubUrl": "https://github.com/muuyal/api-gateway"
     }
   ],
   "team": [
@@ -168,7 +168,7 @@
   "testimonials": [
     {
       "id": "sarah",
-      "content": "The rest.js team delivered our fintech application ahead of schedule with exceptional quality. Their expertise in React and Spring Boot was evident throughout the project.",
+      "content": "The muuyal.io team delivered our fintech application ahead of schedule with exceptional quality. Their expertise in React and Spring Boot was evident throughout the project.",
       "author": "Sarah Johnson",
       "position": "CTO, FinanceFlow Inc.",
       "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
@@ -176,7 +176,7 @@
     },
     {
       "id": "michael",
-      "content": "Working with rest.js was a game-changer. They took our complex business requirements and created an elegant, scalable solution. Highly recommended!",
+      "content": "Working with muuyal.io was a game-changer. They took our complex business requirements and created an elegant, scalable solution. Highly recommended!",
       "author": "Michael Chen",
       "position": "Founder, TechStart Solutions",
       "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
@@ -184,7 +184,7 @@
     },
     {
       "id": "emily",
-      "content": "The QA automation setup from rest.js saved us countless hours. Our deployment process is now seamless, and we catch issues before they reach production.",
+      "content": "The QA automation setup from muuyal.io saved us countless hours. Our deployment process is now seamless, and we catch issues before they reach production.",
       "author": "Emily Rodriguez",
       "position": "Product Manager, DataFlow Corp",
       "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
