@@ -1,0 +1,202 @@
+{
+  "company": {
+    "name": "rest.js",
+    "tagline": "Fast, scalable software development from Chihuahua, Mexico",
+    "description": "We deliver high-quality React, Java, Spring Boot, and Node.js solutions with QA automation and nearshore outsourcing expertise. Build your next project with speed and precision.",
+    "location": "Chihuahua, Mexico",
+    "email": "hello@restjs.dev",
+    "phone": "+52 614 123 4567",
+    "whatsapp": "+52 614 123 4567",
+    "linkedin": "linkedin.com/company/restjs"
+  },
+  "services": [
+    {
+      "id": "fullstack",
+      "title": "Full-Stack Development",
+      "icon": "code",
+      "description": "End-to-end web application development using React.js, Node.js, Java, and Spring Boot. We build scalable, maintainable solutions from concept to deployment.",
+      "features": [
+        "Frontend with React.js & modern UI frameworks",
+        "Backend APIs with Java/Spring Boot or Node.js",
+        "Database design and optimization",
+        "Cloud deployment and DevOps"
+      ],
+      "color": "primary"
+    },
+    {
+      "id": "qa",
+      "title": "QA Automation",
+      "icon": "robot",
+      "description": "Comprehensive testing solutions to ensure your software is reliable, performant, and bug-free before it reaches your users.",
+      "features": [
+        "Automated test suite development",
+        "Performance and load testing",
+        "CI/CD integration",
+        "Manual testing and QA processes"
+      ],
+      "color": "accent"
+    },
+    {
+      "id": "ai",
+      "title": "AI Integrations",
+      "icon": "brain",
+      "description": "Integrate cutting-edge AI capabilities into your applications to enhance user experience and automate complex processes.",
+      "features": [
+        "Machine learning model integration",
+        "Natural language processing",
+        "Computer vision solutions",
+        "Custom AI workflows"
+      ],
+      "color": "purple"
+    },
+    {
+      "id": "nearshore",
+      "title": "Nearshore Outsourcing",
+      "icon": "users",
+      "description": "Dedicated development teams from Chihuahua, Mexico, providing cost-effective solutions with cultural alignment and convenient time zones.",
+      "features": [
+        "Dedicated development teams",
+        "Same time zone collaboration",
+        "English-speaking developers",
+        "Competitive pricing"
+      ],
+      "color": "orange"
+    },
+    {
+      "id": "prototyping",
+      "title": "Rapid Prototyping",
+      "icon": "zap",
+      "description": "Quick development cycles using Replit and modern development tools to validate ideas and deliver MVPs fast.",
+      "features": [
+        "MVP development in weeks",
+        "Iterative feedback cycles",
+        "Cloud-based development",
+        "Scalable architecture from day one"
+      ],
+      "color": "red"
+    },
+    {
+      "id": "consulting",
+      "title": "Technical Consulting",
+      "icon": "settings",
+      "description": "Strategic guidance on technology choices, architecture decisions, and development best practices for your projects.",
+      "features": [
+        "Technology stack selection",
+        "Architecture design review",
+        "Code quality audits",
+        "Performance optimization"
+      ],
+      "color": "indigo"
+    }
+  ],
+  "projects": [
+    {
+      "id": "budgetbuddy",
+      "name": "BudgetBuddy",
+      "description": "A comprehensive personal finance management application that helps users track expenses, set budgets, and achieve financial goals with intelligent insights and automated categorization.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      "featured": true,
+      "technologies": ["React.js", "Spring Boot", "PostgreSQL", "AI/ML"],
+      "problem": "Users struggle to track spending across multiple accounts and categories, leading to budget overruns and unclear financial picture.",
+      "solution": "Built a React.js frontend with Spring Boot backend, featuring real-time expense tracking, AI-powered categorization, and intuitive budget management.",
+      "results": "95% user satisfaction, 40% improvement in budget adherence, automated processing of 10,000+ transactions monthly.",
+      "githubUrl": "https://github.com/restjs/budgetbuddy"
+    },
+    {
+      "id": "ai-cv-builder",
+      "name": "AI CV Builder",
+      "description": "An intelligent resume builder that uses AI to optimize content, suggest improvements, and format professional CVs tailored to specific job requirements and industries.",
+      "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      "featured": true,
+      "technologies": ["React.js", "Node.js", "MongoDB", "OpenAI API"],
+      "problem": "Job seekers spend hours crafting resumes that often fail to pass ATS systems or capture recruiter attention effectively.",
+      "solution": "Developed an AI-powered platform with React.js frontend and Node.js backend, featuring smart content suggestions, ATS optimization, and industry-specific templates.",
+      "results": "85% interview rate increase, 2,000+ CVs generated monthly, 98% ATS compatibility score across major platforms.",
+      "githubUrl": "https://github.com/restjs/ai-cv-builder"
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce Platform",
+      "description": "Full-featured online store with inventory management, payment processing, and analytics dashboard.",
+      "technologies": ["React", "Spring Boot"],
+      "githubUrl": "https://github.com/restjs/ecommerce-platform"
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics Dashboard",
+      "description": "Real-time business intelligence platform with customizable widgets and automated reporting.",
+      "technologies": ["React", "Node.js"],
+      "githubUrl": "https://github.com/restjs/analytics-dashboard"
+    },
+    {
+      "id": "api-gateway",
+      "name": "Mobile API Gateway",
+      "description": "Microservices architecture with API gateway for mobile app backends and third-party integrations.",
+      "technologies": ["Java", "Spring Cloud"],
+      "githubUrl": "https://github.com/restjs/api-gateway"
+    }
+  ],
+  "team": [
+    {
+      "id": "carlos",
+      "name": "Carlos Rodriguez",
+      "role": "Lead Full-Stack Developer",
+      "bio": "5+ years in React, Java, and cloud architecture. Passionate about scalable solutions and clean code.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+      "linkedin": "https://linkedin.com/in/carlos-rodriguez",
+      "github": "https://github.com/carlos-rodriguez"
+    },
+    {
+      "id": "maria",
+      "name": "Maria Gonzalez",
+      "role": "QA Automation Specialist",
+      "bio": "Expert in test automation frameworks and CI/CD integration. Ensures quality at every stage of development.",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+      "linkedin": "https://linkedin.com/in/maria-gonzalez",
+      "github": "https://github.com/maria-gonzalez"
+    },
+    {
+      "id": "diego",
+      "name": "Diego Martinez",
+      "role": "AI Integration Developer",
+      "bio": "Specializes in machine learning integrations and AI-powered applications. Brings cutting-edge tech to practical solutions.",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+      "linkedin": "https://linkedin.com/in/diego-martinez",
+      "github": "https://github.com/diego-martinez"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "sarah",
+      "content": "The rest.js team delivered our fintech application ahead of schedule with exceptional quality. Their expertise in React and Spring Boot was evident throughout the project.",
+      "author": "Sarah Johnson",
+      "position": "CTO, FinanceFlow Inc.",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      "rating": 5
+    },
+    {
+      "id": "michael",
+      "content": "Working with rest.js was a game-changer. They took our complex business requirements and created an elegant, scalable solution. Highly recommended!",
+      "author": "Michael Chen",
+      "position": "Founder, TechStart Solutions",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      "rating": 5
+    },
+    {
+      "id": "emily",
+      "content": "The QA automation setup from rest.js saved us countless hours. Our deployment process is now seamless, and we catch issues before they reach production.",
+      "author": "Emily Rodriguez",
+      "position": "Product Manager, DataFlow Corp",
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      "rating": 5
+    }
+  ],
+  "technologies": [
+    { "name": "React.js", "icon": "fab fa-react", "color": "text-blue-500" },
+    { "name": "Java", "icon": "fab fa-java", "color": "text-orange-600" },
+    { "name": "Spring Boot", "icon": "fas fa-leaf", "color": "text-green-600" },
+    { "name": "Node.js", "icon": "fab fa-node-js", "color": "text-green-500" },
+    { "name": "QA Automation", "icon": "fas fa-robot", "color": "text-purple-600" },
+    { "name": "Nearshore", "icon": "fas fa-globe", "color": "text-primary" }
+  ]
+}
