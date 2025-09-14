@@ -11,6 +11,20 @@
   },
   "services": [
     {
+      "id": "prototyping",
+      "title": "Rapid Prototyping & Proof of Concept",
+      "icon": "zap",
+      "description": "Quick development cycles using Replit and modern development tools to validate ideas, develop proof of concepts, and deliver MVPs fast.",
+      "features": [
+        "Proof of concept development",
+        "MVP development in weeks",
+        "Iterative feedback cycles",
+        "Cloud-based development",
+        "Scalable architecture from day one"
+      ],
+      "color": "red"
+    },
+    {
       "id": "fullstack",
       "title": "Full-Stack Development",
       "icon": "code",
@@ -22,6 +36,20 @@
         "Cloud deployment and DevOps"
       ],
       "color": "primary"
+    },
+    {
+      "id": "odoo",
+      "title": "Odoo Installation & Setup",
+      "icon": "settings",
+      "description": "Complete Odoo ERP implementation including installation, hosting, configuration, and customization to streamline your business operations.",
+      "features": [
+        "Odoo installation and hosting",
+        "Module configuration and setup",
+        "Custom module development",
+        "Data migration and integration",
+        "Training and ongoing support"
+      ],
+      "color": "purple"
     },
     {
       "id": "qa",
@@ -47,7 +75,7 @@
         "Computer vision solutions",
         "Custom AI workflows"
       ],
-      "color": "purple"
+      "color": "orange"
     },
     {
       "id": "nearshore",
@@ -60,20 +88,7 @@
         "English-speaking developers",
         "Competitive pricing"
       ],
-      "color": "orange"
-    },
-    {
-      "id": "prototyping",
-      "title": "Rapid Prototyping",
-      "icon": "zap",
-      "description": "Quick development cycles using Replit and modern development tools to validate ideas and deliver MVPs fast.",
-      "features": [
-        "MVP development in weeks",
-        "Iterative feedback cycles",
-        "Cloud-based development",
-        "Scalable architecture from day one"
-      ],
-      "color": "red"
+      "color": "indigo"
     },
     {
       "id": "consulting",
@@ -86,7 +101,7 @@
         "Code quality audits",
         "Performance optimization"
       ],
-      "color": "indigo"
+      "color": "purple"
     }
   ],
   "projects": [
