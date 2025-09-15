@@ -25,16 +25,6 @@ export default function AboutSection() {
             <p className="text-muted mb-6 leading-relaxed" data-testid="text-story-paragraph-2">
               We specialize in rapid development cycles, leveraging cloud-based development environments and modern frameworks to deliver solutions faster than traditional development approaches, without compromising on quality or scalability.
             </p>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-4 bg-slate-50 rounded-lg">
-                <div className="text-3xl font-bold text-primary mb-1" data-testid="text-stat-projects">50+</div>
-                <div className="text-sm text-muted">Projects Delivered</div>
-              </div>
-              <div className="text-center p-4 bg-slate-50 rounded-lg">
-                <div className="text-3xl font-bold text-primary mb-1" data-testid="text-stat-satisfaction">98%</div>
-                <div className="text-sm text-muted">Client Satisfaction</div>
-              </div>
-            </div>
           </div>
           <div>
             <img 

@@ -207,32 +207,6 @@
       "github": ""
     }
   ],
-  "testimonials": [
-    {
-      "id": "sarah",
-      "content": "The muuyal.io team delivered our fintech application ahead of schedule with exceptional quality. Their expertise in React and Spring Boot was evident throughout the project.",
-      "author": "Sarah Johnson",
-      "position": "CTO, FinanceFlow Inc.",
-      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      "rating": 5
-    },
-    {
-      "id": "michael",
-      "content": "Working with muuyal.io was a game-changer. They took our complex business requirements and created an elegant, scalable solution. Highly recommended!",
-      "author": "Michael Chen",
-      "position": "Founder, TechStart Solutions",
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      "rating": 5
-    },
-    {
-      "id": "emily",
-      "content": "The QA automation setup from muuyal.io saved us countless hours. Our deployment process is now seamless, and we catch issues before they reach production.",
-      "author": "Emily Rodriguez",
-      "position": "Product Manager, DataFlow Corp",
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      "rating": 5
-    }
-  ],
   "technologies": [
     { "name": "React.js", "icon": "fab fa-react", "color": "text-blue-500" },
     { "name": "Java", "icon": "fab fa-java", "color": "text-orange-600" },
