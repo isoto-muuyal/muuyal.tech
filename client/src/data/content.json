@@ -153,31 +153,58 @@
   ],
   "team": [
     {
-      "id": "carlos",
-      "name": "Carlos Rodriguez",
-      "role": "Lead Full-Stack Developer",
-      "bio": "5+ years in React, Java, and cloud architecture. Passionate about scalable solutions and clean code.",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
-      "linkedin": "https://linkedin.com/in/carlos-rodriguez",
-      "github": "https://github.com/carlos-rodriguez"
+      "id": "israel",
+      "name": "Israel",
+      "role": "Senior Developer and Team Lead",
+      "bio": "AWS, LLM, Odoo, Automation",
+      "image": "",
+      "linkedin": "",
+      "github": ""
     },
     {
-      "id": "maria",
-      "name": "Maria Gonzalez",
-      "role": "QA Automation Specialist",
-      "bio": "Expert in test automation frameworks and CI/CD integration. Ensures quality at every stage of development.",
-      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
-      "linkedin": "https://linkedin.com/in/maria-gonzalez",
-      "github": "https://github.com/maria-gonzalez"
+      "id": "carmen",
+      "name": "Carmen",
+      "role": "Developer",
+      "bio": "AWS, UI, LLM, Automation",
+      "image": "",
+      "linkedin": "",
+      "github": ""
     },
     {
-      "id": "diego",
-      "name": "Diego Martinez",
-      "role": "AI Integration Developer",
-      "bio": "Specializes in machine learning integrations and AI-powered applications. Brings cutting-edge tech to practical solutions.",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
-      "linkedin": "https://linkedin.com/in/diego-martinez",
-      "github": "https://github.com/diego-martinez"
+      "id": "ruben",
+      "name": "Ruben",
+      "role": "Developer",
+      "bio": "LLM, Automation",
+      "image": "",
+      "linkedin": "",
+      "github": ""
+    },
+    {
+      "id": "america",
+      "name": "America",
+      "role": "Developer",
+      "bio": "LLM, UI, Automation",
+      "image": "",
+      "linkedin": "",
+      "github": ""
+    },
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "role": "Developer",
+      "bio": "LLM, UI, Automation",
+      "image": "",
+      "linkedin": "",
+      "github": ""
+    },
+    {
+      "id": "paulina",
+      "name": "Paulina",
+      "role": "Developer",
+      "bio": "LLM, UI, Automation",
+      "image": "",
+      "linkedin": "",
+      "github": ""
     }
   ],
   "testimonials": [
