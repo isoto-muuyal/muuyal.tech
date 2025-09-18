@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div id="home" className="min-h-screen bg-slate-50">
       <Navigation />
       <HeroSection />
       <ServicesSection />

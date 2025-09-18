@@ -9,7 +9,7 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-secondary mb-4" data-testid="text-about-title">
-            About muuyal.io
+            About muuyal.tech
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto" data-testid="text-about-description">
             Born in Chihuahua, Mexico, we're a passionate team of developers committed to delivering world-class software solutions.
@@ -20,7 +20,7 @@ export default function AboutSection() {
           <div>
             <h3 className="text-3xl font-bold text-secondary mb-6" data-testid="text-story-title">Our Story</h3>
             <p className="text-muted mb-6 leading-relaxed" data-testid="text-story-paragraph-1">
-              Founded in the heart of Chihuahua, Mexico, muuyal.io emerged from a simple vision: to bridge the gap between innovative technology and practical business solutions. Our team combines deep technical expertise with an understanding of modern business challenges.
+              Founded in the heart of Chihuahua, Mexico, muuyal.tech emerged from a simple vision: to bridge the gap between innovative technology and practical business solutions. Our team combines deep technical expertise with an understanding of modern business challenges.
             </p>
             <p className="text-muted mb-6 leading-relaxed" data-testid="text-story-paragraph-2">
               We specialize in rapid development cycles, leveraging cloud-based development environments and modern frameworks to deliver solutions faster than traditional development approaches, without compromising on quality or scalability.

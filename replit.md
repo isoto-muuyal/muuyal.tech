@@ -1,8 +1,8 @@
-# muuyal.io
+# muuyal.tech
 
 ## Overview
 
-muuyal.io is a modern full-stack web application built as a portfolio website for a software development company based in Chihuahua, Mexico. The application showcases the company's services, portfolio projects, team information, and provides a contact form for potential clients. It's designed as a comprehensive business website with a clean, professional interface that highlights the company's expertise in full-stack development, QA automation, and AI integrations.
+muuyal.tech is a modern full-stack web application built as a portfolio website for a software development company based in Chihuahua, Mexico. The application showcases the company's services, portfolio projects, team information, and provides a contact form for potential clients. It's designed as a comprehensive business website with a clean, professional interface that highlights the company's expertise in full-stack development, QA automation, and AI integrations.
 
 ## User Preferences
 
