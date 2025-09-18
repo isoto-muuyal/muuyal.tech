@@ -22,7 +22,7 @@ export default {
           foreground: "var(--popover-foreground)",
         },
         primary: {
-          DEFAULT: "#2563EB",
+          DEFAULT: "#8B5CF6",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
