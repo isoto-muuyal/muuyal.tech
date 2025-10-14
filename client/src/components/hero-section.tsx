@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import contentData from "@/data/content.json";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function HeroSection() {
   const { company, technologies } = contentData;
+  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -20,24 +22,24 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+    <section id="home" className="bg-gradient-to-br from-slate-50 to-purple-50 dark:from-slate-900 dark:to-purple-950 py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-secondary mb-6 leading-tight" data-testid="text-hero-title">
-            Fast, scalable software development from{" "}
-            <span className="text-primary">Chihuahua, Mexico</span>
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight" data-testid="text-hero-title">
+            {t.hero.title}{" "}
+            <span className="text-primary">{t.hero.location}</span>
           </h1>
-          <p className="text-xl text-muted mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="text-hero-description">
-            {company.description}
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="text-hero-description">
+            {t.hero.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               onClick={handleConsultation}
               size="lg"
-              className="bg-primary text-white hover:bg-blue-700 text-lg"
+              className="bg-primary text-white hover:bg-primary/90 text-lg"
               data-testid="button-consultation-hero"
             >
-              Book Free Consultation
+              {t.hero.cta}
             </Button>
             <Button 
               onClick={handleViewWork}
@@ -46,7 +48,7 @@ export default function HeroSection() {
               className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg"
               data-testid="button-view-work"
             >
-              View Our Work
+              {t.hero.viewPortfolio}
             </Button>
           </div>
           
@@ -55,11 +57,11 @@ export default function HeroSection() {
             {technologies.map((tech, index) => (
               <div 
                 key={tech.name}
-                className="text-center p-4 bg-white rounded-xl shadow-sm border border-slate-200"
+                className="text-center p-4 bg-card rounded-xl shadow-sm border border-border"
                 data-testid={`card-tech-${tech.name.toLowerCase().replace('.', '').replace(' ', '-')}`}
               >
                 <i className={`${tech.icon} text-3xl ${tech.color} mb-2`}></i>
-                <div className="font-semibold text-sm text-secondary">{tech.name}</div>
+                <div className="font-semibold text-sm text-foreground">{tech.name}</div>
               </div>
             ))}
           </div>

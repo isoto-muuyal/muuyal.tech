@@ -1,8 +1,10 @@
 import { Linkedin, Github, Twitter, MessageSquare } from "lucide-react";
 import contentData from "@/data/content.json";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function Footer() {
   const { company, services } = contentData;
+  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -20,7 +22,7 @@ export default function Footer() {
               <span className="text-3xl font-bold" data-testid="text-footer-logo">{company.name}</span>
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed max-w-md" data-testid="text-footer-description">
-              Fast, scalable software development from Chihuahua, Mexico. We help businesses build innovative solutions with modern technologies and proven methodologies.
+              {t.footer.tagline}
             </p>
             <div className="flex space-x-4">
               <a 
@@ -55,7 +57,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4" data-testid="text-footer-services-title">Services</h3>
+            <h3 className="font-semibold mb-4" data-testid="text-footer-services-title">{t.nav.services}</h3>
             <ul className="space-y-3 text-slate-300">
               <li>
                 <button 
@@ -106,7 +108,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4" data-testid="text-footer-company-title">Company</h3>
+            <h3 className="font-semibold mb-4" data-testid="text-footer-company-title">{t.footer.quickLinks}</h3>
             <ul className="space-y-3 text-slate-300">
               <li>
                 <button 
@@ -151,7 +153,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-700 pt-8 text-center text-slate-300">
           <p data-testid="text-footer-copyright">
-            &copy; 2024 {company.name}. All rights reserved. | {company.location}
+            &copy; 2024 {company.name}. {t.footer.rights} | {company.location}
           </p>
         </div>
       </div>

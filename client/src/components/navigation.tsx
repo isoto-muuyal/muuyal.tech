@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -18,67 +22,69 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
+    <nav className="bg-background shadow-sm sticky top-0 z-50 border-b border-border dark:border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-primary" data-testid="text-logo">muuyal.tech</span>
+            <span className="text-2xl font-bold text-primary dark:text-primary" data-testid="text-logo">muuyal.tech</span>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <button 
                 onClick={() => scrollToSection('home')}
-                className="text-secondary hover:text-primary transition-colors font-medium"
+                className="text-foreground hover:text-primary transition-colors font-medium"
                 data-testid="link-nav-home"
               >
-                Home
+                {t.nav.home}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="text-muted hover:text-primary transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
                 data-testid="link-nav-services"
               >
-                Services
+                {t.nav.services}
               </button>
               <button 
                 onClick={() => scrollToSection('portfolio')}
-                className="text-muted hover:text-primary transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
                 data-testid="link-nav-portfolio"
               >
-                Portfolio
+                {t.nav.portfolio}
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-muted hover:text-primary transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
                 data-testid="link-nav-about"
               >
-                About
+                {t.nav.about}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-muted hover:text-primary transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
                 data-testid="link-nav-contact"
               >
-                Contact
+                {t.nav.contact}
               </button>
             </div>
           </div>
           
-          <div className="hidden md:block">
+          <div className="hidden md:flex md:items-center md:space-x-4">
+            <LanguageSwitcher />
+            <ModeToggle />
             <Button 
               onClick={handleConsultation}
-              className="bg-primary text-white hover:bg-blue-700"
+              className="bg-primary text-white hover:bg-primary/90"
               data-testid="button-consultation-nav"
             >
-              Book Consultation
+              {t.nav.consultation}
             </Button>
           </div>
           
           <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-secondary"
+              className="text-foreground"
               data-testid="button-mobile-menu"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -88,49 +94,53 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-200 py-4">
+          <div className="md:hidden border-t border-border dark:border-border py-4">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
-                className="text-secondary hover:text-primary transition-colors font-medium text-left"
+                className="text-foreground hover:text-primary transition-colors font-medium text-left"
                 data-testid="link-mobile-home"
               >
-                Home
+                {t.nav.home}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
                 className="text-muted hover:text-primary transition-colors font-medium text-left"
                 data-testid="link-mobile-services"
               >
-                Services
+                {t.nav.services}
               </button>
               <button 
                 onClick={() => scrollToSection('portfolio')}
                 className="text-muted hover:text-primary transition-colors font-medium text-left"
                 data-testid="link-mobile-portfolio"
               >
-                Portfolio
+                {t.nav.portfolio}
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-muted hover:text-primary transition-colors font-medium text-left"
                 data-testid="link-mobile-about"
               >
-                About
+                {t.nav.about}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="text-muted hover:text-primary transition-colors font-medium text-left"
                 data-testid="link-mobile-contact"
               >
-                Contact
+                {t.nav.contact}
               </button>
+              <div className="flex gap-2">
+                <LanguageSwitcher />
+                <ModeToggle />
+              </div>
               <Button 
                 onClick={handleConsultation}
-                className="bg-primary text-white hover:bg-blue-700 w-full"
+                className="bg-primary text-white hover:bg-primary/90 w-full"
                 data-testid="button-consultation-mobile"
               >
-                Book Consultation
+                {t.nav.consultation}
               </Button>
             </div>
           </div>

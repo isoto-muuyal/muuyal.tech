@@ -8,10 +8,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import contentData from "@/data/content.json";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function ContactSection() {
   const { company } = contentData;
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -62,8 +64,8 @@ export default function ContactSection() {
 
       if (result.success) {
         toast({
-          title: "Message Sent Successfully!",
-          description: "We'll get back to you within 24 hours during business days.",
+          title: t.contact.form.success,
+          description: t.contact.form.success,
         });
         
         // Reset form
@@ -81,7 +83,7 @@ export default function ContactSection() {
     } catch (error) {
       toast({
         title: "Error",
-        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+        description: error instanceof Error ? error.message : t.contact.form.error,
         variant: "destructive",
       });
     } finally {
@@ -94,10 +96,10 @@ export default function ContactSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-secondary mb-4" data-testid="text-contact-title">
-            Get In Touch
+            {t.contact.title}
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto" data-testid="text-contact-description">
-            Ready to start your next project? Let's discuss how we can help you achieve your goals.
+            {t.contact.description}
           </p>
         </div>
 
@@ -116,7 +118,7 @@ export default function ContactSection() {
                   <Mail className="text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-secondary">Email Us</div>
+                  <div className="font-semibold text-secondary">{t.contact.info.email}</div>
                   <div className="text-muted">{company.email}</div>
                 </div>
               </div>
@@ -126,17 +128,17 @@ export default function ContactSection() {
                   <MessageSquare className="text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-secondary">WhatsApp</div>
+                  <div className="font-semibold text-secondary">{t.contact.info.whatsapp}</div>
                   <div className="text-muted">{company.whatsapp}</div>
                 </div>
               </div>
 
               <div className="flex items-center" data-testid="contact-info-linkedin">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
                   <Linkedin className="text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-secondary">LinkedIn</div>
+                  <div className="font-semibold text-secondary">{t.contact.info.linkedin}</div>
                   <div className="text-muted">{company.linkedin}</div>
                 </div>
               </div>
@@ -156,36 +158,36 @@ export default function ContactSection() {
           <div className="bg-slate-50 p-8 rounded-xl border border-slate-200">
             <form onSubmit={handleSubmit}>
               <div className="mb-6">
-                <label className="block text-sm font-medium text-secondary mb-2">Name *</label>
+                <label className="block text-sm font-medium text-secondary mb-2">{t.contact.form.name} *</label>
                 <Input
                   type="text"
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
-                  placeholder="Your full name"
+                  placeholder={t.contact.form.namePlaceholder}
                   required
                   data-testid="input-name"
                 />
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-secondary mb-2">Email *</label>
+                <label className="block text-sm font-medium text-secondary mb-2">{t.contact.form.email} *</label>
                 <Input
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  placeholder="your.email@company.com"
+                  placeholder={t.contact.form.emailPlaceholder}
                   required
                   data-testid="input-email"
                 />
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-secondary mb-2">Company</label>
+                <label className="block text-sm font-medium text-secondary mb-2">{t.contact.form.company}</label>
                 <Input
                   type="text"
                   value={formData.company}
                   onChange={(e) => handleInputChange("company", e.target.value)}
-                  placeholder="Your company name"
+                  placeholder={t.contact.form.companyPlaceholder}
                   data-testid="input-company"
                 />
               </div>
@@ -208,12 +210,12 @@ export default function ContactSection() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-secondary mb-2">Project Details *</label>
+                <label className="block text-sm font-medium text-secondary mb-2">{t.contact.form.message} *</label>
                 <Textarea
                   rows={4}
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
-                  placeholder="Tell us about your project requirements, timeline, and any specific technologies you'd like to use..."
+                  placeholder={t.contact.form.messagePlaceholder}
                   required
                   data-testid="textarea-message"
                 />
@@ -236,10 +238,10 @@ export default function ContactSection() {
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary text-white hover:bg-blue-700 text-lg"
+                className="w-full bg-primary text-white hover:bg-primary/90 text-lg"
                 data-testid="button-submit-contact"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? t.contact.form.sending : t.contact.form.submit}
               </Button>
 
               <p className="text-sm text-muted mt-4 text-center" data-testid="text-response-time">

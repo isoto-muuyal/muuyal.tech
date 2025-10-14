@@ -1,28 +1,30 @@
 import { Clock, DollarSign, Handshake, Linkedin, Github } from "lucide-react";
 import contentData from "@/data/content.json";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function AboutSection() {
   const { team } = contentData;
+  const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-secondary mb-4" data-testid="text-about-title">
-            About muuyal.tech
+          <h2 className="text-4xl font-bold text-foreground mb-4" data-testid="text-about-title">
+            {t.about.title}
           </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto" data-testid="text-about-description">
-            Born in Chihuahua, Mexico, we're a passionate team of developers committed to delivering world-class software solutions.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-about-description">
+            {t.about.description}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
-            <h3 className="text-3xl font-bold text-secondary mb-6" data-testid="text-story-title">Our Story</h3>
-            <p className="text-muted mb-6 leading-relaxed" data-testid="text-story-paragraph-1">
+            <h3 className="text-3xl font-bold text-foreground mb-6" data-testid="text-story-title">Our Story</h3>
+            <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-story-paragraph-1">
               Founded in the heart of Chihuahua, Mexico, muuyal.tech emerged from a simple vision: to bridge the gap between innovative technology and practical business solutions. Our team combines deep technical expertise with an understanding of modern business challenges.
             </p>
-            <p className="text-muted mb-6 leading-relaxed" data-testid="text-story-paragraph-2">
+            <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-story-paragraph-2">
               We specialize in rapid development cycles, leveraging cloud-based development environments and modern frameworks to deliver solutions faster than traditional development approaches, without compromising on quality or scalability.
             </p>
           </div>
@@ -37,8 +39,8 @@ export default function AboutSection() {
         </div>
 
         {/* Why Nearshore section */}
-        <div className="bg-slate-50 rounded-2xl p-12 mb-16">
-          <h3 className="text-3xl font-bold text-secondary mb-8 text-center" data-testid="text-nearshore-title">
+        <div className="bg-muted/10 dark:bg-muted/5 rounded-2xl p-12 mb-16">
+          <h3 className="text-3xl font-bold text-foreground mb-8 text-center" data-testid="text-nearshore-title">
             Why Nearshore with Chihuahua?
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -46,8 +48,8 @@ export default function AboutSection() {
               <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Clock className="text-white text-2xl" />
               </div>
-              <h4 className="font-semibold text-secondary mb-2" data-testid="text-benefit-timezone-title">Same Time Zone</h4>
-              <p className="text-muted text-sm" data-testid="text-benefit-timezone-description">
+              <h4 className="font-semibold text-foreground mb-2" data-testid="text-benefit-timezone-title">Same Time Zone</h4>
+              <p className="text-muted-foreground text-sm" data-testid="text-benefit-timezone-description">
                 Work seamlessly with US businesses with overlapping business hours for real-time collaboration.
               </p>
             </div>
@@ -55,8 +57,8 @@ export default function AboutSection() {
               <div className="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mx-auto mb-4">
                 <DollarSign className="text-white text-2xl" />
               </div>
-              <h4 className="font-semibold text-secondary mb-2" data-testid="text-benefit-cost-title">Cost Effective</h4>
-              <p className="text-muted text-sm" data-testid="text-benefit-cost-description">
+              <h4 className="font-semibold text-foreground mb-2" data-testid="text-benefit-cost-title">Cost Effective</h4>
+              <p className="text-muted-foreground text-sm" data-testid="text-benefit-cost-description">
                 High-quality development at competitive rates, providing exceptional value for your investment.
               </p>
             </div>
@@ -64,8 +66,8 @@ export default function AboutSection() {
               <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Handshake className="text-white text-2xl" />
               </div>
-              <h4 className="font-semibold text-secondary mb-2" data-testid="text-benefit-culture-title">Cultural Alignment</h4>
-              <p className="text-muted text-sm" data-testid="text-benefit-culture-description">
+              <h4 className="font-semibold text-foreground mb-2" data-testid="text-benefit-culture-title">Cultural Alignment</h4>
+              <p className="text-muted-foreground text-sm" data-testid="text-benefit-culture-description">
                 Strong English skills and cultural understanding ensure smooth communication and project success.
               </p>
             </div>
@@ -74,8 +76,8 @@ export default function AboutSection() {
 
         {/* Team Section */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-secondary mb-4" data-testid="text-team-title">Meet Our Team</h3>
-          <p className="text-muted max-w-2xl mx-auto" data-testid="text-team-description">
+          <h3 className="text-3xl font-bold text-foreground mb-4" data-testid="text-team-title">{t.about.team}</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-team-description">
             Experienced developers passionate about creating innovative solutions and pushing the boundaries of technology.
           </p>
         </div>
@@ -89,13 +91,13 @@ export default function AboutSection() {
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-lg"
                 data-testid={`img-team-member-${member.id}`}
               />
-              <h4 className="font-semibold text-secondary mb-1" data-testid={`text-team-name-${member.id}`}>
+              <h4 className="font-semibold text-foreground mb-1" data-testid={`text-team-name-${member.id}`}>
                 {member.name}
               </h4>
               <p className="text-primary font-medium mb-2" data-testid={`text-team-role-${member.id}`}>
                 {member.role}
               </p>
-              <p className="text-muted text-sm mb-4" data-testid={`text-team-bio-${member.id}`}>
+              <p className="text-muted-foreground text-sm mb-4" data-testid={`text-team-bio-${member.id}`}>
                 {member.bio}
               </p>
               <div className="flex justify-center space-x-3">

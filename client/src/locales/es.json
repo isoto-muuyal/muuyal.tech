@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "consultation": "Agendar Consulta"
+  },
+  "hero": {
+    "title": "Desarrollo de software rápido y escalable desde",
+    "location": "Chihuahua, México",
+    "description": "Entregamos soluciones de alta calidad en React, Java, Spring Boot y Node.js con automatización QA y experiencia en outsourcing nearshore. Construye tu próximo proyecto con velocidad y precisión.",
+    "cta": "Consulta Gratuita",
+    "viewPortfolio": "Ver Nuestro Trabajo"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "description": "Proporcionamos soluciones integrales de desarrollo de software adaptadas a las necesidades de tu negocio",
+    "prototyping": {
+      "title": "Prototipado Rápido y Prueba de Concepto",
+      "description": "Ciclos de desarrollo rápidos usando Replit y herramientas modernas para validar ideas, desarrollar pruebas de concepto y entregar MVPs rápidamente.",
+      "features": [
+        "Desarrollo de prueba de concepto",
+        "Desarrollo de MVP en semanas",
+        "Ciclos de retroalimentación iterativa",
+        "Desarrollo basado en la nube",
+        "Arquitectura escalable desde el primer día"
+      ]
+    },
+    "fullstack": {
+      "title": "Desarrollo Full-Stack",
+      "description": "Desarrollo de aplicaciones web de extremo a extremo usando React.js, Node.js, Java y Spring Boot. Construimos soluciones escalables y mantenibles desde el concepto hasta el despliegue.",
+      "features": [
+        "Frontend con React.js y frameworks UI modernos",
+        "APIs backend con Java/Spring Boot o Node.js",
+        "Diseño y optimización de bases de datos",
+        "Despliegue en la nube y DevOps"
+      ]
+    },
+    "odoo": {
+      "title": "Instalación y Configuración de Odoo",
+      "description": "Implementación completa de Odoo ERP incluyendo instalación, hosting, configuración y personalización para optimizar las operaciones de tu negocio.",
+      "features": [
+        "Instalación y hosting de Odoo",
+        "Configuración de módulos",
+        "Desarrollo de módulos personalizados",
+        "Migración e integración de datos",
+        "Capacitación y soporte continuo"
+      ]
+    },
+    "qa": {
+      "title": "Automatización QA",
+      "description": "Soluciones integrales de pruebas para garantizar que tu software sea confiable, eficiente y libre de errores antes de llegar a tus usuarios.",
+      "features": [
+        "Desarrollo de suites de pruebas automatizadas",
+        "Pruebas de rendimiento y carga",
+        "Integración CI/CD",
+        "Procesos de pruebas manuales y QA"
+      ]
+    },
+    "ai": {
+      "title": "Integraciones de IA",
+      "description": "Integra capacidades de IA de vanguardia en tus aplicaciones para mejorar la experiencia del usuario y automatizar procesos complejos.",
+      "features": [
+        "Integración de modelos de aprendizaje automático",
+        "Procesamiento de lenguaje natural",
+        "Soluciones de visión por computadora",
+        "Flujos de trabajo de IA personalizados"
+      ]
+    },
+    "nearshore": {
+      "title": "Outsourcing Nearshore",
+      "description": "Equipos de desarrollo dedicados desde Chihuahua, México, proporcionando soluciones rentables con alineación cultural y zonas horarias convenientes.",
+      "features": [
+        "Equipos de desarrollo dedicados",
+        "Colaboración en la misma zona horaria",
+        "Desarrolladores que hablan inglés",
+        "Precios competitivos"
+      ]
+    },
+    "consulting": {
+      "title": "Consultoría Técnica",
+      "description": "Orientación estratégica sobre elecciones tecnológicas, decisiones de arquitectura y mejores prácticas de desarrollo para tus proyectos.",
+      "features": [
+        "Selección de stack tecnológico",
+        "Revisión de diseño de arquitectura",
+        "Auditorías de calidad de código",
+        "Optimización de rendimiento"
+      ]
+    }
+  },
+  "portfolio": {
+    "title": "Nuestro Trabajo",
+    "description": "Explora nuestros proyectos recientes que muestran nuestra experiencia en desarrollo full-stack y soluciones innovadoras",
+    "featured": "Proyectos Destacados",
+    "other": "Otros Proyectos",
+    "viewDetails": "Ver Detalles",
+    "viewGithub": "Ver en GitHub",
+    "technologies": "Tecnologías",
+    "problem": "Problema",
+    "solution": "Solución",
+    "results": "Resultados"
+  },
+  "about": {
+    "title": "Acerca de muuyal.tech",
+    "description": "Somos un equipo dedicado de ingenieros de software con sede en Chihuahua, México, apasionados por entregar soluciones de alta calidad.",
+    "team": "Nuestro Equipo"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "¿Listo para iniciar tu proyecto? Hablemos sobre cómo podemos ayudarte a alcanzar tus objetivos.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu.correo@ejemplo.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente! Te contactaremos pronto.",
+      "error": "Error al enviar el mensaje. Por favor intenta de nuevo."
+    },
+    "info": {
+      "email": "Envíanos un correo",
+      "phone": "Llámanos",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "footer": {
+    "tagline": "Desarrollo de software rápido y escalable desde Chihuahua, México",
+    "quickLinks": "Enlaces Rápidos",
+    "connect": "Conecta",
+    "rights": "Todos los derechos reservados."
+  }
+}

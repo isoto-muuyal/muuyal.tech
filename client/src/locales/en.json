@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "consultation": "Book Consultation"
+  },
+  "hero": {
+    "title": "Fast, scalable software development from",
+    "location": "Chihuahua, Mexico",
+    "description": "We deliver high-quality React, Java, Spring Boot, and Node.js solutions with QA automation and nearshore outsourcing expertise. Build your next project with speed and precision.",
+    "cta": "Book Free Consultation",
+    "viewPortfolio": "View Our Work"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We provide comprehensive software development solutions tailored to your business needs",
+    "prototyping": {
+      "title": "Rapid Prototyping & Proof of Concept",
+      "description": "Quick development cycles using Replit and modern development tools to validate ideas, develop proof of concepts, and deliver MVPs fast.",
+      "features": [
+        "Proof of concept development",
+        "MVP development in weeks",
+        "Iterative feedback cycles",
+        "Cloud-based development",
+        "Scalable architecture from day one"
+      ]
+    },
+    "fullstack": {
+      "title": "Full-Stack Development",
+      "description": "End-to-end web application development using React.js, Node.js, Java, and Spring Boot. We build scalable, maintainable solutions from concept to deployment.",
+      "features": [
+        "Frontend with React.js & modern UI frameworks",
+        "Backend APIs with Java/Spring Boot or Node.js",
+        "Database design and optimization",
+        "Cloud deployment and DevOps"
+      ]
+    },
+    "odoo": {
+      "title": "Odoo Installation & Setup",
+      "description": "Complete Odoo ERP implementation including installation, hosting, configuration, and customization to streamline your business operations.",
+      "features": [
+        "Odoo installation and hosting",
+        "Module configuration and setup",
+        "Custom module development",
+        "Data migration and integration",
+        "Training and ongoing support"
+      ]
+    },
+    "qa": {
+      "title": "QA Automation",
+      "description": "Comprehensive testing solutions to ensure your software is reliable, performant, and bug-free before it reaches your users.",
+      "features": [
+        "Automated test suite development",
+        "Performance and load testing",
+        "CI/CD integration",
+        "Manual testing and QA processes"
+      ]
+    },
+    "ai": {
+      "title": "AI Integrations",
+      "description": "Integrate cutting-edge AI capabilities into your applications to enhance user experience and automate complex processes.",
+      "features": [
+        "Machine learning model integration",
+        "Natural language processing",
+        "Computer vision solutions",
+        "Custom AI workflows"
+      ]
+    },
+    "nearshore": {
+      "title": "Nearshore Outsourcing",
+      "description": "Dedicated development teams from Chihuahua, Mexico, providing cost-effective solutions with cultural alignment and convenient time zones.",
+      "features": [
+        "Dedicated development teams",
+        "Same time zone collaboration",
+        "English-speaking developers",
+        "Competitive pricing"
+      ]
+    },
+    "consulting": {
+      "title": "Technical Consulting",
+      "description": "Strategic guidance on technology choices, architecture decisions, and development best practices for your projects.",
+      "features": [
+        "Technology stack selection",
+        "Architecture design review",
+        "Code quality audits",
+        "Performance optimization"
+      ]
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "description": "Explore our recent projects showcasing our expertise in full-stack development and innovative solutions",
+    "featured": "Featured Projects",
+    "other": "Other Projects",
+    "viewDetails": "View Details",
+    "viewGithub": "View on GitHub",
+    "technologies": "Technologies",
+    "problem": "Problem",
+    "solution": "Solution",
+    "results": "Results"
+  },
+  "about": {
+    "title": "About muuyal.tech",
+    "description": "We are a dedicated team of software engineers based in Chihuahua, Mexico, passionate about delivering high-quality solutions.",
+    "team": "Our Team"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Ready to start your project? Let's discuss how we can help you achieve your goals.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "email": "Email Us",
+      "phone": "Call Us",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "footer": {
+    "tagline": "Fast, scalable software development from Chihuahua, Mexico",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "rights": "All rights reserved."
+  }
+}
