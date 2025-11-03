@@ -1,20 +1,20 @@
 {
   "company": {
     "name": "muuyal.tech",
-    "tagline": "Fast, scalable software development from Chihuahua, Mexico",
-    "description": "We deliver high-quality React, Java, Spring Boot, and Node.js solutions with QA automation and nearshore outsourcing expertise. Build your next project with speed and precision.",
+    "tagline": "Fast, IA powered prototyping and development nearshore from Mexico",
+    "description": "We deliver high-quality prototypes, proof of concept, solutions and SDET / QA automation and nearshore outsourcing expertise. Build your next project, fast.",
     "location": "Chihuahua, Mexico",
-    "email": "hello@muuyal.tech",
-    "phone": "+52 614 123 4567",
-    "whatsapp": "+52 614 123 4567",
-    "linkedin": "linkedin.com/company/muuyal"
+    "email": "info@muuyal.tech",
+    "phone": "+52 614 522 1169",
+    "whatsapp": "+52 614 522 1169",
+    "linkedin": "https://www.linkedin.com/in/israel-soto-923649b8/"
   },
   "services": [
     {
       "id": "prototyping",
       "title": "Rapid Prototyping & Proof of Concept",
       "icon": "zap",
-      "description": "Quick development cycles using Replit and modern development tools to validate ideas, develop proof of concepts, and deliver MVPs fast.",
+      "description": "Quick development cycles using the right AI tool for your need and Java, React, and AWS to validate ideas, develop proof of concepts, and deliver MVPs fast.",
       "features": [
         "Proof of concept development",
         "MVP development in weeks",
