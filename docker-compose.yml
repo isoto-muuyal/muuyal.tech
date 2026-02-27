@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: muuyal.tech
+    image: ${IMAGE_URI:-muuyal.tech:latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:${APP_HOST_PORT:-5002}:${APP_CONTAINER_PORT:-5000}"
