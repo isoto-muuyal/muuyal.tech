@@ -50,16 +50,23 @@ export default function AnalyticsTracker() {
   const [location] = useLocation();
   const trackedSectionsRef = useRef<Set<string>>(new Set());
   const pagePath = useMemo(() => location || window.location.pathname, [location]);
+  const isAdminPath = pagePath.startsWith("/admin");
 
   useEffect(() => {
+    if (isAdminPath) {
+      return;
+    }
     trackedSectionsRef.current.clear();
     postAnalytics({
       eventType: "page_entered",
       pagePath,
     });
-  }, [pagePath]);
+  }, [isAdminPath, pagePath]);
 
   useEffect(() => {
+    if (isAdminPath) {
+      return;
+    }
     const sections = Array.from(document.querySelectorAll("section[id], div[id='home']"));
     if (sections.length === 0) {
       return;
@@ -91,9 +98,12 @@ export default function AnalyticsTracker() {
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, [pagePath]);
+  }, [isAdminPath, pagePath]);
 
   useEffect(() => {
+    if (isAdminPath) {
+      return;
+    }
     const clickHandler = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null;
       const clickable = target?.closest("button, a, [role='button']") as HTMLElement | null;
@@ -112,7 +122,7 @@ export default function AnalyticsTracker() {
 
     document.addEventListener("click", clickHandler, true);
     return () => document.removeEventListener("click", clickHandler, true);
-  }, [pagePath]);
+  }, [isAdminPath, pagePath]);
 
   return null;
 }
