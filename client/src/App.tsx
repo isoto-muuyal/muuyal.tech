@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import AnalyticsTracker from "@/components/analytics-tracker";
 import { LanguageProvider } from "@/contexts/language-context";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
@@ -25,6 +26,7 @@ function App() {
       <ThemeProvider defaultTheme="light" storageKey="muuyal-ui-theme">
         <LanguageProvider>
           <TooltipProvider>
+            <AnalyticsTracker />
             <Toaster />
             <Router />
           </TooltipProvider>
