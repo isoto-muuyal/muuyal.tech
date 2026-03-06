@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
+import { EmailParams, MailerSend, Recipient, Sender } from "mailersend";
 import {
   appendAnalyticsEvent,
   getAnalyticsFilePath,
@@ -21,6 +22,69 @@ const analyticsEventSchema = z.object({
   buttonLabel: z.string().optional().default(""),
   referrer: z.string().optional().default(""),
 });
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+async function sendContactNotification(payload: {
+  name: string;
+  email: string;
+  company?: string | null;
+  projectType?: string | null;
+  message: string;
+}) {
+  const apiKey = process.env.MAILERSEND_API_KEY;
+  const fromEmail = process.env.FROM_EMAIL;
+  const toEmail = process.env.TO_EMAIL;
+  const fromName = process.env.FROM_NAME || "Website Contact";
+
+  if (!apiKey || !fromEmail || !toEmail) {
+    throw new Error("Missing MailerSend configuration");
+  }
+
+  const mailerSend = new MailerSend({ apiKey });
+  const sender = new Sender(fromEmail, fromName);
+  const recipients = [new Recipient(toEmail, toEmail)];
+  const replyTo = new Recipient(payload.email, payload.name);
+
+  const textBody = [
+    "New contact form submission",
+    "",
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}`,
+    `Company: ${payload.company || "Not provided"}`,
+    `Project Type: ${payload.projectType || "Not provided"}`,
+    "",
+    "Message:",
+    payload.message,
+  ].join("\n");
+
+  const htmlBody = `
+    <h2>New contact form submission</h2>
+    <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
+    <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
+    <p><strong>Company:</strong> ${escapeHtml(payload.company || "Not provided")}</p>
+    <p><strong>Project Type:</strong> ${escapeHtml(payload.projectType || "Not provided")}</p>
+    <p><strong>Message:</strong></p>
+    <p>${escapeHtml(payload.message).replace(/\n/g, "<br />")}</p>
+  `;
+
+  const emailParams = new EmailParams()
+    .setFrom(sender)
+    .setTo(recipients)
+    .setReplyTo(replyTo)
+    .setSubject(`New Contact Form: ${payload.name}`)
+    .setText(textBody)
+    .setHtml(htmlBody);
+
+  await mailerSend.email.send(emailParams);
+}
 
 function unauthorized(res: any) {
   res.set("WWW-Authenticate", 'Basic realm="Admin"');
@@ -89,6 +153,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
       const submission = await storage.createContactSubmission(validatedData);
+      await sendContactNotification(validatedData);
       res.json({ success: true, id: submission.id });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -97,7 +162,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
           message: "Validation failed", 
           errors: error.errors 
         });
+      } else if (error instanceof Error && error.message === "Missing MailerSend configuration") {
+        res.status(500).json({
+          success: false,
+          message: "Email service is not configured",
+        });
       } else {
+        console.error("Contact form submission failed:", error);
         res.status(500).json({ 
           success: false, 
           message: "Failed to submit contact form" 
