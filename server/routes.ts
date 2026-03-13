@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
 import { EmailParams, MailerSend, Recipient, Sender } from "mailersend";
+import { log } from "./vite";
 import {
   appendAnalyticsEvent,
   getAnalyticsFilePath,
@@ -94,14 +95,17 @@ function unauthorized(res: any) {
 function adminAuth(req: any, res: any, next: any) {
   const adminUser = process.env.ADMIN_USER;
   const adminPassword = process.env.ADMIN_PASSWORD;
+  const path = req.path || req.originalUrl || "/admin";
 
   if (!adminUser || !adminPassword) {
+    log(`Admin auth not configured for ${path}. Missing ADMIN_USER or ADMIN_PASSWORD.`, "auth");
     res.status(503).send("Admin credentials are not configured");
     return;
   }
 
   const authHeader = req.headers.authorization;
   if (!authHeader?.startsWith("Basic ")) {
+    log(`Admin auth missing Basic header for ${path}.`, "auth");
     unauthorized(res);
     return;
   }
@@ -112,6 +116,7 @@ function adminAuth(req: any, res: any, next: any) {
   const password = separatorIndex >= 0 ? decoded.slice(separatorIndex + 1) : "";
 
   if (username !== adminUser || password !== adminPassword) {
+    log(`Admin auth rejected invalid credentials for ${path}.`, "auth");
     unauthorized(res);
     return;
   }
